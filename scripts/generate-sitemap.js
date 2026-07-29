@@ -10,7 +10,7 @@ if (fs.existsSync(postsDataPath)) {
   posts = JSON.parse(fs.readFileSync(postsDataPath, 'utf-8'));
 }
 
-const baseUrl = 'https://your-domain.com'; // In a real app this would be an env var
+const baseUrl = 'https://sahansandaruwan.github.io/techjobs'; // In a real app this would be an env var
 
 let xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
