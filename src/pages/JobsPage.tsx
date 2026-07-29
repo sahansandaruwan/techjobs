@@ -293,9 +293,9 @@ export default function JobsPage() {
   };
 
   const getMoreUrl = () => {
-    const url = new URL(window.location.href);
-    url.searchParams.set('p', (page + 1).toString());
-    return url.pathname + url.search;
+    const newParams = new URLSearchParams(searchParams);
+    newParams.set('p', (page + 1).toString());
+    return `?${newParams.toString()}`;
   };
 
   return (
@@ -331,10 +331,10 @@ export default function JobsPage() {
                 <tbody>
                   <tr>
                     <td style={{ width: '18px', paddingRight: '4px' }}>
-                      <a href="/" className="hn-logo">J</a>
+                      <Link to="/" className="hn-logo">J</Link>
                     </td>
                     <td style={{ lineHeight: '12pt', height: '10px' }}>
-                      <span className="hn-title"><a href="/">Tech Jobs</a></span>
+                      <span className="hn-title"><Link to="/">Tech Jobs</Link></span>
                       <span className="desktop-nav" style={{ fontSize: '10pt', marginLeft: '5px' }}>
                         <a href="#" onClick={(e) => { e.preventDefault(); updateSearchParam('view', 'all'); }} style={{ fontWeight: viewFilter === 'all' ? 'bold' : 'normal' }}>latest</a> |{' '}
                         <a href="#" onClick={(e) => { e.preventDefault(); updateSearchParam('remote', isRemoteOnly ? 'false' : 'true'); }} style={{ fontWeight: isRemoteOnly ? 'bold' : 'normal' }}>remote</a> |{' '}

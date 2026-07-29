@@ -65,9 +65,9 @@ export default function NewsPage() {
   };
 
   const getMoreUrl = () => {
-    const url = new URL(window.location.href);
-    url.searchParams.set('p', (page + 1).toString());
-    return url.pathname + url.search;
+    const newParams = new URLSearchParams(searchParams);
+    newParams.set('p', (page + 1).toString());
+    return `?${newParams.toString()}`;
   };
 
   const timeAgo = (unixTime: number) => {

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function CookieBanner() {
   const [isVisible, setIsVisible] = useState(false);
@@ -31,7 +32,7 @@ export default function CookieBanner() {
       fontSize: '10pt'
     }}>
       <span style={{ marginRight: '10px' }}>
-        We use cookies to improve your experience and serve relevant ads. By using our site, you consent to our <a href="/privacy" style={{ textDecoration: 'underline' }}>Privacy Policy</a>.
+        We use cookies to improve your experience and serve relevant ads. By using our site, you consent to our <Link to="/privacy" style={{ textDecoration: 'underline' }}>Privacy Policy</Link>.
       </span>
       <button 
         onClick={acceptCookies}
