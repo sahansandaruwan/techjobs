@@ -1,0 +1,8 @@
+{
+  "name": "TechJobs Aggregator",
+  "description": "A job board aggregator that fetches real job listings from top forums (HackerNews) and uses AI to extract structured job details.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
